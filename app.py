@@ -4,12 +4,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
 
 
-@app.route("/age_at_marriage", methods=["GET"])
+@app.route("/", methods=["GET"])
 def age_at_marriage():
 
     df = pd.read_csv("ages.csv")
