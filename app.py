@@ -47,7 +47,7 @@ def age_at_marriage():
 
 
 
-@app.route("/age_at_marriage/<country_name>")
+@app.route("/<country_name>")
 def age_by_country(country_name):
     df = pd.read_csv("ages.csv")
     
@@ -68,7 +68,7 @@ def age_by_country(country_name):
 
 
 
-@app.route("/age_at_marriage/<gender>", methods=["GET"])
+@app.route("/<gender>", methods=["GET"])
 def age_by_gender(gender):
     df = pd.read_csv("ages.csv")
     
