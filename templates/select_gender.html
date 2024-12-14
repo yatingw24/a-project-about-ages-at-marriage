@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age at First Marriage by Gender</title>
+    <style>
+        h1 {color:rgb(110, 2, 110);}
+        h3 {color:rgb(171, 1, 171);}
+        p {color:darkblue; text-align: center;}
+        table {width: 100%; text-align: center; margin-top: 50px; border :'1'}
+        th, td {padding: 10px; border: 1px solid; text-align: center;}
+        th {background-color: #f2f2f2;}
+        a {font-size: 30px}
+    </style>
+</head>
+<body style="background-color:rgb(249, 237, 247);">
+    <div class="container">
+        <h1 style="text-align: center;">Average Age at First Marriage by Gender</h1>
+        <h3 style="text-align: center;">Looking for the average age for {{ gender }}?</h3>
+        
+        <table>
+            <tr>
+                <th>Country</th>
+                <th>Age at First Marriage for {{ gender }}</th>
+            </tr>
+            {% for entry in ages %}
+                <tr>
+                    <td>{{ entry['Country'] }}</td>
+                    <td>
+                        {% if entry[gender] != 'not available' %}
+                            {{ entry[gender] }} years
+                        {% else %}
+                            Data not available
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <p>
+        <a href="/age_at_marriage">Go Back</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,218 @@
+,Country,Female,Male
+0,Afghanistan,21,24
+1,Albania,24,30
+2,Algeria,28,32
+3,Angola,21,25
+4,Argentina,24,26
+5,Armenia,24,28
+6,Aruba,28,31
+7,Australia,29,31
+8,Austria,27,29
+9,Azerbaijan,24,28
+10,"Bahamas, The",27,30
+11,Bahrain,26,
+12,Bangladesh,18,25
+13,Barbados,17,34
+14,Belarus,22,24
+15,Belgium,26,28
+16,Belize,20,22
+17,Benin,20,25
+18,Bermuda,31,32
+19,Bhutan,23,26
+20,Bolivia,24,26
+21,Bosnia and Herzegovina,25,29
+22,Botswana,22,29
+23,Brazil,23,26
+24,Brunei Darussalam,26,29
+25,Bulgaria,32,35
+26,Burkina Faso,20,26
+27,Burundi,22,26
+28,Cabo Verde,22,27
+29,Cambodia,21,24
+30,Cameroon,22,28
+31,Canada,27,28
+32,Cayman Islands,28,29
+33,Central African Republic,17,21
+34,Chad,18,24
+35,Chile,27,29
+36,China,25,27
+37,Colombia,22,26
+38,Comoros,22,25
+39,"Congo, Dem. Rep.",20,25
+40,"Congo, Rep.",21,27
+41,Costa Rica,26,29
+42,Cote d'Ivoire,23,29
+43,Croatia,27,30
+44,Cuba,22,25
+45,Cyprus,26,29
+46,Czechia,32,34
+47,Denmark,31,33
+48,Djibouti,29,33
+49,Dominican Republic,21,24
+50,Ecuador,21,25
+51,"Egypt, Arab Rep.",22,28
+52,El Salvador,22,25
+53,Equatorial Guinea,20,26
+54,Estonia,33,36
+55,Eswatini,26,30
+56,Ethiopia,21,25
+57,Faroe Islands,31,34
+58,Fiji,24,27
+59,Finland,30,32
+60,France,32,33
+61,French Polynesia,33,35
+62,Gabon,22,27
+63,"Gambia, The",21,29
+64,Georgia,22,27
+65,Germany,31,33
+66,Ghana,23,27
+67,Gibraltar,29,31
+68,Greece,29,32
+69,Greenland,32,34
+70,Guatemala,22,25
+71,Guinea,19,28
+72,Guinea-Bissau,24,30
+73,Guyana,19,21
+74,Haiti,24,28
+75,Honduras,21,24
+76,"Hong Kong SAR, China",29,32
+77,Hungary,32,35
+78,Iceland,32,33
+79,India,21,26
+80,Indonesia,22,27
+81,"Iran, Islamic Rep.",23,27
+82,Iraq,22,26
+83,Ireland,32,33
+84,Isle of Man,30,32
+85,Israel,26,29
+86,Italy,32,35
+87,Jamaica,25,
+88,Japan,29,30
+89,Jordan,24,30
+90,Kazakhstan,22,26
+91,Kenya,21,26
+92,Kiribati,21,24
+93,"Korea, Dem. People's Rep.",25,29
+94,"Korea, Rep.",31,33
+95,Kuwait,25,27
+96,Kyrgyz Republic,21,25
+97,Lao PDR,20,24
+98,Latvia,30,33
+99,Lebanon,28,32
+100,Lesotho,22,28
+101,Liberia,22,26
+102,Liechtenstein,29,32
+103,Lithuania,32,35
+104,Luxembourg,30,32
+105,"Macao SAR, China",30,32
+106,Madagascar,19,22
+107,Malawi,20,24
+108,Malaysia,25,28
+109,Maldives,22,25
+110,Mali,18,25
+111,Malta,28,30
+112,Marshall Islands,24,25
+113,Mauritania,21,29
+114,Mauritius,23,29
+115,Mexico,23,25
+116,"Micronesia, Fed. Sts.",25,
+117,Moldova,25,28
+118,Monaco,30,33
+119,Mongolia,23,25
+120,Montenegro,26,29
+121,Morocco,24,31
+122,Mozambique,18,23
+123,Myanmar,22,25
+124,Namibia,30,34
+125,Nauru,20,
+126,Nepal,20,23
+127,Netherlands,32,34
+128,New Caledonia,32,34
+129,New Zealand,30,32
+130,Nicaragua,21,24
+131,Niger,17,24
+132,Nigeria,21,28
+133,North Macedonia,25,
+134,Northern Mariana Islands,28,30
+135,Norway,32,34
+136,Oman,25,27
+137,Pakistan,23,26
+138,Palau,28,29
+139,Panama,21,25
+140,Papua New Guinea,21,26
+141,Paraguay,21,
+142,Peru,23,27
+143,Philippines,23,27
+144,Poland,26,28
+145,Portugal,30,32
+146,Puerto Rico,29,30
+147,Qatar,25,27
+148,Romania,25,29
+149,Russian Federation,24,27
+150,Rwanda,24,27
+151,Samoa,23,27
+152,San Marino,31,34
+153,Sao Tome and Principe,21,25
+154,Saudi Arabia,26,30
+155,Senegal,22,30
+156,Serbia,26,30
+157,Sierra Leone,23,27
+158,Singapore,27,30
+159,Sint Maarten (Dutch part),28,32
+160,Slovak Republic,31,33
+161,Slovenia,34,35
+162,Solomon Islands,22,26
+163,Somalia,20,
+164,South Africa,27,30
+165,South Sudan,18,25
+166,Spain,27,30
+167,Sri Lanka,23,27
+168,St. Lucia,21,
+169,St. Vincent and the Grenadines,21,27
+170,Sudan,21,28
+171,Suriname,29,32
+172,Sweden,31,33
+173,Switzerland,30,33
+174,Syrian Arab Republic,25,
+175,Tajikistan,20,24
+176,Tanzania,21,25
+177,Thailand,22,28
+178,Timor-Leste,23,27
+179,Togo,21,27
+180,Tonga,25,27
+181,Trinidad and Tobago,29,31
+182,Tunisia,28,32
+183,Turkiye,23,27
+184,Turkmenistan,23,
+185,Tuvalu,21,
+186,Uganda,20,24
+187,Ukraine,23,25
+188,United Arab Emirates,25,26
+189,United Kingdom,27,28
+190,United States,27,29
+191,Uruguay,23,26
+192,Uzbekistan,22,
+193,Vanuatu,22,25
+194,"Venezuela, RB",22,25
+195,Viet Nam,22,26
+196,Virgin Islands (U.S.),30,32
+197,West Bank and Gaza,22,26
+198,"Yemen, Rep.",22,26
+199,Zambia,21,25
+200,Zimbabwe,21,26
+201,American Samoa,,
+202,Andorra,,
+203,Antigua and Barbuda,,
+204,British Virgin Islands,,
+205,Channel Islands,,
+206,Curacao,,
+207,Dominica,,
+208,Eritrea,,
+209,Grenada,,
+210,Guam,,
+211,Kosovo,,
+212,Libya,,
+213,Seychelles,,
+214,St. Kitts and Nevis,,
+215,St. Martin (French part),,
+216,Turks and Caicos Islands,,

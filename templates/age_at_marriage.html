@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age at First Marriage Across Countries</title>
+    <style>
+        body {display: flex; background-color: rgb(249, 237, 247);justify-content: center; align-items: center; height: 100vh;font-family: Cambria, sans-serif;flex-direction: column;}
+        h1 {color:rgb(110, 2, 110);text-align: center;font-family: Cambria, sans-serif; font-size: 50px;}
+        h3 {color:rgb(171, 1, 171);text-align: center;font-family: Cambria, sans-serif; font-size: 30px;}
+        div {width: 50%;margin: 0;padding: 30px;background-color: white center;}
+        select {width: 100%; padding: 12px 14px ;margin: 12px 0;font-size: 16px;border: 2px solid;background-color: #f9f9f9;}
+        button {width: 100%;padding: 14px;font-size: 20px;background-color: rgb(110, 2, 110);color: white; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Age at First Marriage Across Countries</h1>
+    <div class = 'container'>
+        <h3>Look up data for both genders by a country...</h3>
+        <form method="GET" action="/age_at_marriage">
+            <p>
+                <select name="country_name">
+                    <option value=''>-- Select a Country --</option>
+                    {% for country in ages %}
+                    <option value="{{country['Country']}}">{{country['Country']}}
+                    </option>
+                    {% endfor %}
+                </select>
+                <button type="submit">View Ages for Either Gender</button>
+            </p>
+        </form>
+    </div>
+
+    <div class = 'container'>
+        <h3>if you are not sure which country, just choose a gender</h3>
+        <form method="GET" action="/age_at_marriage">
+            <p>
+                <select name="gender">
+                    <option value=''>-- Select a Gender for {{country_name}}--</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+                <button type="submit">View Ages for Selected Gender</button>
+            </p>
+        </form>
+     </div>
+    
+</body>
+</html>

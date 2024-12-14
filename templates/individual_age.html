@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age at First Marriage for {{country['Country']}}
+    </title>
+    <style>
+        h1 {color:rgb(110, 2, 110);text-align: center;font-family: Cambria, sans-serif; font-size: 60px;}
+        h2 {color:rgb(171, 1, 171);text-align: center;font-family: Cambria, sans-serif; font-size: 30px;}
+
+    </style>
+</head>
+<body style="background-color:rgb(249, 237, 247);">
+    <div class="container">
+        <h1>In {{country['Country']}}, the average age at first marriage for...</h1>
+        <h2>
+            {% if country['Female'] != "not available" %}
+                Female's age at her first marriage is {{country['Female'] |int}} years old.
+            {% else %}
+                Data for female's age at first marriage is not available, sorry. 
+            {% endif %}
+        </h2>
+        <h2>
+            {% if country['Male'] != "not available"  %}
+                Male's age at his first marriage {{country['Male'] |int}} years old.
+            {% else %}
+                Data for male's age at first marriage is not available, sorry. 
+            {% endif %}
+        </h2>
+
+
+    </div>
+
+    
+    <p><a href="/age_at_marriage">Go Back</a></p>
+</body>
+</html>
+
+
