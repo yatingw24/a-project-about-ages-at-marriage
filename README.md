@@ -46,12 +46,31 @@ return render_template(
 ```
 
 ### Adding More Pages and Content
-now, we want pages for each country, right?\
-So I built another route, `age_at_marriage/<country_name>` and another template, `individual_age.html`.\The logic is pretty simple here:
+#### `Country` as a filter
+now, we want pages for each country, right?
+So I built another route, `age_at_marriage/<country_name>` and another template, `individual_age.html`.
+The logic is pretty simple here:
 ```python
 <h1>In {{country['Country']}}, the average age at first marriage for...</h1>
+<h2>
+    {% if country['Female'] != "not available" %}
+        Female's age at her first marriage is {{country['Female'] |int}} years old.
+    {% else %}
+        Data for female's age at first marriage is not available, sorry. 
+    {% endif %}
+</h2>
 ```
-
+If an integer, aka `the age`, is unavilable for a country, then a `not available` will be returned:  
+```python
+<h2>
+    {% if country['Male'] != "not available"  %}
+        Male's age at his first marriage {{country['Male'] |int}} years old.
+    {% else %}
+        Data for male's age at first marriage is not available, sorry. 
+    {% endif %}
+</h2>
+```
+#### `Gender` as a filter
 Due to time constraint towards the end of semester, I was't able to add gender as a secondary condition/filter. However, I did try to add a new route which is similar to the `@app.route("/<country_name>")` route:
 
 ```python 
@@ -73,16 +92,6 @@ ages = ages.to_dict('records')
 return render_template('select_gender.html', gender=gender, ages=ages)
 ```
 
-If an integer, aka `the age`, is unavilable for a country, then a `not available` will be returned:  
-```python
-        <h2>
-            {% if country['Male'] != "not available"  %}
-                Male's age at his first marriage {{country['Male'] |int}} years old.
-            {% else %}
-                Data for male's age at first marriage is not available, sorry. 
-            {% endif %}
-        </h2>
-```
 the presentable format is a table. In my template, `select_gender.html', I first set up each column's name:
 ```python
 <tr>
