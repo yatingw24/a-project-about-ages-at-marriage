@@ -20,6 +20,7 @@ def age_at_marriage():
     ages = df.to_dict('records')
 
     ages=ages
+```
 5. while at the same time building the html template `age_at_marriage.html`;/
 
 6. now, we want pages for each country, right? So I built another route, `age_at_marriage/<country_name>`.\
