@@ -8,10 +8,10 @@ Here is the [web!](https://a-project-about-ages-at-marriagegunicorn.onrender.com
 3. getting myself familiarized with HTML and CSS basic formatting.
 
 ## What I did:
-1. acquired the data from [World Bank;](https://databank.worldbank.org/source/gender-statistics) and downloaded the most recent statistics in a csv file;\
-2. in a jupyter notebook, imported the csv file and created a new DataFrame. Then, removed all null values and re-ordered the countries in which countries without any data are moved to the bottom;\
-3. exported the cleaned DataFrame in csv format;\
-4. created the `app.py` file, adding the homepage route:\
+1. acquired the data from [World Bank;](https://databank.worldbank.org/source/gender-statistics) and downloaded the most recent statistics in a csv file;
+2. in a jupyter notebook, imported the csv file and created a new DataFrame. Then, removed all null values and re-ordered the countries in which countries without any data are moved to the bottom;
+3. exported the cleaned DataFrame in csv format;
+4. created the `app.py` file, adding the homepage route:
 ```python
 @app.route("/")
 def age_at_marriage():
@@ -21,7 +21,11 @@ def age_at_marriage():
 
     ages=ages
 ```
-5. while at the same time building the html template `age_at_marriage.html`;/
+5. while at the same time building the html template `age_at_marriage.html`;
+```python
+<body>
+    <h1>Age at First Marriage Across Countries</h1>
+```
 
 6. now, we want pages for each country, right? So I built another route, `age_at_marriage/<country_name>`.\
 7. In order to populate the page, I created a new template, `individual_age.html`.
