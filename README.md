@@ -8,7 +8,8 @@ Here is the [web!](https://a-project-about-ages-at-marriagegunicorn.onrender.com
 3.getting myself familiarized with HTML and CSS basic formatting.
 
 ## What I did:
-1.acquired the data from [World Bank](https://databank.worldbank.org/source/gender-statistics)
+1.acquired the data from [World Bank;](https://databank.worldbank.org/source/gender-statistics)\
+2.downloaded the most recent statistics in a csv file;\
 
 ### **The data comes from World Bank
 
