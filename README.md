@@ -37,7 +37,7 @@ return render_template(
 ```
 ### Adding More Pages and Content
 now, we want pages for each country, right?\
-So I built another route, `age_at_marriage/<country_name>`:
+So I built another route, `age_at_marriage/<country_name>` and another template, `individual_age.html`:
 ```python
 @app.route("/<country_name>")
 def age_by_country(country_name):
@@ -50,7 +50,16 @@ def age_by_country(country_name):
     male_age = int(country['Male']) if country['Male'] != 'not available' else None
 ```
 
-In order to populate the page, I created a new template, `individual_age.html`.
+```python
+        <h2>
+            {% if country['Female'] != "not available" %}
+                Female's age at her first marriage is {{country['Female'] |int}} years old.
+            {% else %}
+                Data for female's age at first marriage is not available, sorry. 
+            {% endif %}
+        </h2>
+```
+
 
 ## Things I'd like to add/improve:
 insert a chart showing gender difference for each country;\
