@@ -52,26 +52,6 @@ So I built another route, `age_at_marriage/<country_name>` and another template,
 <h1>In {{country['Country']}}, the average age at first marriage for...</h1>
 ```
 
-If an integer, aka `the age`, is unavilable for a country, then a `not available` will be returned:  
-```python
-        <h2>
-            {% if country['Male'] != "not available"  %}
-                Male's age at his first marriage {{country['Male'] |int}} years old.
-            {% else %}
-                Data for male's age at first marriage is not available, sorry. 
-            {% endif %}
-        </h2>
-```
-If data is available for either or both genders:
-```python
-        <h2>
-            {% if country['Female'] != "not available" %}
-                Female's age at her first marriage is {{country['Female'] |int}} years old.
-            {% else %}
-                Data for female's age at first marriage is not available, sorry. 
-            {% endif %}
-        </h2>
-```
 Due to time constraint towards the end of semester, I was't able to add gender as a secondary condition/filter. However, I did try to add a new route which is similar to the `@app.route("/<country_name>")` route:
 
 ```python 
@@ -84,13 +64,24 @@ def age_by_gender(gender):
 An user is able to look up a sepcific gender's data for all countries: 
 ```python
     
-    if gender == "Female":
-        age = df[['Country', 'Female']]
-    elif gender == "Male":
-        age = df[['Country', 'Male']]
+if gender == "Female":
+    age = df[['Country', 'Female']]
+elif gender == "Male":
+    age = df[['Country', 'Male']]
 
-    ages = ages.to_dict('records')
-    return render_template('select_gender.html', gender=gender, ages=ages)
+ages = ages.to_dict('records')
+return render_template('select_gender.html', gender=gender, ages=ages)
+```
+
+If an integer, aka `the age`, is unavilable for a country, then a `not available` will be returned:  
+```python
+        <h2>
+            {% if country['Male'] != "not available"  %}
+                Male's age at his first marriage {{country['Male'] |int}} years old.
+            {% else %}
+                Data for male's age at first marriage is not available, sorry. 
+            {% endif %}
+        </h2>
 ```
 the presentable format is a table. In my template, `select_gender.html', I first set up each column's name:
 ```python
@@ -103,18 +94,18 @@ the presentable format is a table. In my template, `select_gender.html', I first
 then, looping through each country's data for the selected gender:
 ```python
 
-            {% for entry in ages %}
-                <tr>
-                    <td>{{ entry['Country'] }}</td>
-                    <td>
-                        {% if entry[gender] != 'not available' %}
-                            {{ entry[gender] }} years
-                        {% else %}
-                            Data not available
-                        {% endif %}
-                    </td>
-                </tr>
-            {% endfor %}
+{% for entry in ages %}
+    <tr>
+        <td>{{ entry['Country'] }}</td>
+        <td>
+            {% if entry[gender] != 'not available' %}
+                {{ entry[gender] }} years
+            {% else %}
+                Data not available
+            {% endif %}
+        </td>
+    </tr>
+{% endfor %}
 ```
 ### Linking everything
 To link everything, I went back to my `app.py`. I added and adjusted a few more lines of codes:
