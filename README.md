@@ -13,6 +13,7 @@ acquired the data from [World Bank;](https://databank.worldbank.org/source/gende
 ### Cleaning and Filter Data
 1. open the csv file, remove all null values and re-order the countries in which those without any data are moved to the bottom in pandas;
 2. exported the cleaned DataFrame as `ages.csv`:
+
 | Country     |     Male    |    Female   |
 | --------    |     --      |      --     |
 | Afghanistan |    21       |      24     | 
