@@ -69,8 +69,49 @@ Here is what I did in `individual_age.html` for countries without any data:
             {% endif %}
         </h2>
 ```
+Due to time constraint towards the end of semester, I was't able to add gender as a secondary condition/filter. However, I did try to add a new route which is similar to the `@app.route("/<country_name>")` route:
+
+```python 
+@app.route("/<gender>", methods=["GET"])
+def age_by_gender(gender):
+    df = pd.read_csv("ages.csv")
+
+    gender = request.args.get("gender")
+```
+An user is able to look up a sepcific gender's data for all countries: 
+```python
+    
+    if gender == "Female":
+        age = df[['Country', 'Female']]
+    elif gender == "Male":
+        age = df[['Country', 'Male']]
+
+    ages = ages.to_dict('records')
+    return render_template('select_gender.html', gender=gender, ages=ages)
+```
+the presentable format is a table. In my template, `select_gender.html': 
+```python
+<table>
+            <tr>
+                <th>Country</th>
+                <th>Age at First Marriage for {{ gender }}</th>
+            </tr>
+            {% for entry in ages %}
+                <tr>
+                    <td>{{ entry['Country'] }}</td>
+                    <td>
+                        {% if entry[gender] != 'not available' %}
+                            {{ entry[gender] }} years
+                        {% else %}
+                            Data not available
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+```
 ### Linking everything
-If a user specifies a `country_name`, the app searches for matching rows in the data and returns details for that country:
+If a user specifies a `country_name`, the app searches for matching rows in the data and returns details for that country. in `app.py', I added and adjusted a few more lines of codes:
 
 ```python
 @app.route("/", methods=["GET"])
@@ -88,30 +129,18 @@ def age_at_marriage():
         return render_template('individual_age.html',
                                country = country
                                )
-    elif select_gender:
-        if select_gender == 'Female':
-            age = df[['Country', 'Female']]
-
-        elif select_gender == 'Male':
-            age = df[['Country', 'Male']]
  
 
         age=age.to_dict('records')
         return render_template('select_gender.html',
                                    gender=select_gender,
                                    ages=age)
-
-
-    return render_template(
-        'age_at_marriage.html',
-        ages=ages,
-            country=country)
 ```
 
 ## Things I'd like to add/improve:
-insert a chart showing gender difference for each country;\
-use gender as a secondary filter  to exactly pinpoint a specific gender's age in a specific country;\
-autogenerating a chart for comparision purposes
+1. insert a chart showing gender difference for each country;\
+2. use gender as a secondary filter  to exactly pinpoint a specific gender's age in a specific country;\
+3. autogenerating a chart for comparision purposes
 
 
 
