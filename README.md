@@ -145,7 +145,7 @@ If a user specifies a `gender`, the app searches for matching rows in the data a
 ## Things I'd like to add/improve:
 1. insert a chart showing gender difference for each country;\
 2. use gender as a secondary filter  to exactly pinpoint a specific gender's age in a specific country;\
-3. autogenerating a chart for comparision purposes
+3. If possible, I'd like my app to autogenerate a chart for comparision purposes if an user would like to see the age difference for females in two countries.
 
 
 
